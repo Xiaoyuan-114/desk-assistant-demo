@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+  <title id="title">第一次成功路径</title>
+  <desc id="desc">设置里粘贴密钥，回到助手提问，得到演示数字与图，或未接入确认卡。</desc>
+  <rect width="1200" height="280" rx="26" fill="#fff4e5"/>
+  <rect x="1" y="1" width="1198" height="278" rx="25" fill="none" stroke="#e4cdb0"/>
+  <g transform="translate(40 40)">
+    <rect width="340" height="200" rx="20" fill="#fffaf3" stroke="#e4cdb0"/>
+    <text x="28" y="44" fill="#d62828" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">01</text>
+    <text x="28" y="92" fill="#2b2118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="28" font-weight="700">设置</text>
+    <text x="28" y="132" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20">粘贴 API Key</text>
+    <text x="28" y="164" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20">测试后保存</text>
+  </g>
+  <path d="M392 140 H428" stroke="#d62828" stroke-width="3"/>
+  <path d="M418 130 L432 140 L418 150" fill="none" stroke="#d62828" stroke-width="3"/>
+  <g transform="translate(440 40)">
+    <rect width="340" height="200" rx="20" fill="#fffaf3" stroke="#e4cdb0"/>
+    <text x="28" y="44" fill="#d62828" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">02</text>
+    <text x="28" y="92" fill="#2b2118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="28" font-weight="700">助手</text>
+    <text x="28" y="132" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20">默认停在这一栏</text>
+    <text x="28" y="164" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20">可一句连问三件事</text>
+  </g>
+  <path d="M792 140 H828" stroke="#d62828" stroke-width="3"/>
+  <path d="M818 130 L832 140 L818 150" fill="none" stroke="#d62828" stroke-width="3"/>
+  <g transform="translate(840 40)">
+    <rect width="320" height="200" rx="20" fill="#fffaf3" stroke="#e4cdb0"/>
+    <text x="28" y="44" fill="#d62828" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">03</text>
+    <text x="28" y="92" fill="#2b2118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="28" font-weight="700">回复</text>
+    <text x="28" y="132" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20">演示数字与图</text>
+    <text x="28" y="164" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20">或未接入确认卡</text>
+  </g>
+</svg>

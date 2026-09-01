@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="128" viewBox="0 0 1200 128" role="img" aria-labelledby="title desc">
+  <title id="title">开始使用</title>
+  <desc id="desc">两台终端启动后，到设置粘贴密钥，再回助手提问。</desc>
+  <rect width="1200" height="128" rx="22" fill="#fff4e5"/>
+  <rect x="1" y="1" width="1198" height="126" rx="21" fill="none" stroke="#e4cdb0"/>
+  <rect x="48" y="54" width="36" height="8" rx="4" fill="#d62828"/>
+  <text x="100" y="48" fill="#2b2118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="40" font-weight="700">开始使用</text>
+  <text x="100" y="88" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20">Python 起后端，Node 起前端，设置里填 Key。</text>
+</svg>
