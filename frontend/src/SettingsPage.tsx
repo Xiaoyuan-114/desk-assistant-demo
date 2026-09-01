@@ -43,11 +43,7 @@ export default function SettingsPage() {
     setBusy(true)
     setError(null)
     try {
-      const data = await saveLlm({
-        api_key: key || undefined,
-        base_url: url,
-        model,
-      })
+      const data = await saveLlm({ api_key: key || undefined, base_url: url, model })
       setStatus(data)
       setKey('')
       setTested(false)
@@ -73,19 +69,19 @@ export default function SettingsPage() {
   }
 
   return (
-    <main className="settings">
-      <h1>模型密钥</h1>
-      <p className="hint">密钥只存在本机后端（SQLite 或 .env），不会出现在对话记录里。刷新后密码框为空。</p>
-      <p className="status" role="status">
-        {status == null
-          ? '读取中…'
-          : status.configured
-            ? `已配置 · ${status.source === 'settings' ? '本机设置' : '服务端 .env'}${
-                status.last4 ? ` · ****${status.last4}` : ''
-              }`
-            : '未配置'}
-      </p>
-      <form onSubmit={(e) => void onSave(e)}>
+    <main className="settings-page">
+      <form className="panel" onSubmit={(e) => void onSave(e)}>
+        <h1>模型密钥</h1>
+        <p className="hint">密钥只存在本机后端（SQLite 或 .env），不会出现在对话记录里。刷新后密码框为空。</p>
+        <p className="status" role="status">
+          {status == null
+            ? '读取中…'
+            : status.configured
+              ? `已配置 · ${status.source === 'settings' ? '本机设置' : '服务端 .env'}${
+                  status.last4 ? ` · ****${status.last4}` : ''
+                }`
+              : '未配置'}
+        </p>
         <label>
           接口地址
           <input value={url} onChange={(e) => { setUrl(e.target.value); setTested(false) }} placeholder="https://api.deepseek.com" />
@@ -104,22 +100,22 @@ export default function SettingsPage() {
             autoComplete="new-password"
           />
         </label>
-        <div className="actions">
-          <button type="button" className="ghost" disabled={busy} onClick={() => void onTest()}>
+        <div className="settings-actions">
+          <button type="button" className="ghost-btn" disabled={busy} onClick={() => void onTest()}>
             测试
           </button>
-          <button type="submit" className="primary" disabled={busy}>
+          <button type="submit" className="primary-btn" disabled={busy}>
             保存
           </button>
           {status?.source === 'settings' && (
-            <button type="button" className="ghost" disabled={busy} onClick={() => void onClear()}>
+            <button type="button" className="ghost-btn" disabled={busy} onClick={() => void onClear()}>
               清除本机密钥
             </button>
           )}
         </div>
+        {error && <p className="error-hint">{error}</p>}
+        {hint && <p className="ok-hint">{hint}</p>}
       </form>
-      {error && <p className="error">{error}</p>}
-      {hint && <p className="ok">{hint}</p>}
     </main>
   )
 }

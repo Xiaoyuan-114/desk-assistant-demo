@@ -17,27 +17,43 @@ const TABS = [
 
 type Tab = (typeof TABS)[number]['id']
 
+function tabFromHash(): Tab {
+  const id = window.location.hash.replace('#', '')
+  return TABS.some((item) => item.id === id) ? (id as Tab) : 'agent'
+}
+
 export default function App() {
-  const [tab, setTab] = useState<Tab>('agent')
+  const [tab, setTab] = useState<Tab>(tabFromHash)
+
+  function openTab(next: Tab) {
+    setTab(next)
+    window.location.hash = next
+  }
   return (
-    <div className={tab === 'agent' ? 'app app-agent' : 'app'}>
+    <div className={tab === 'agent' ? 'app app--agent' : 'app'}>
       <header className="topbar">
-        <div className="brand">
-          <strong>柜台助手演示</strong>
-          <span>仅助手可用</span>
+        <div className="brand-block">
+          <span className="brand-mark" aria-hidden="true">柜</span>
+          <div className="brand-text">
+            <strong>柜台助手演示</strong>
+            <small>仅助手可用</small>
+          </div>
         </div>
-        <nav>
+        <nav className="topbar-nav" aria-label="主导航">
           {TABS.map((item) => (
             <button
               key={item.id}
               type="button"
-              className={tab === item.id ? 'nav-on' : 'nav-btn'}
-              onClick={() => setTab(item.id)}
+              className={tab === item.id ? 'nav-active' : 'nav-btn'}
+              onClick={() => openTab(item.id)}
             >
               {item.label}
             </button>
           ))}
         </nav>
+        <div className="topbar-right">
+          <div className="status">演示</div>
+        </div>
       </header>
       {tab === 'agent' && <AgentPage />}
       {tab === 'settings' && <SettingsPage />}

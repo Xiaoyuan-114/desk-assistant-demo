@@ -1,15 +1,15 @@
 <p align="center">
-  <img src="./assets/readme/hero.svg" width="100%" alt="柜台助手演示：填入 API Key 即可提问，导航其它栏是占位，没有真实收银账本。">
+  <img src="./assets/readme/hero.svg" width="100%" alt="柜台助手演示：左侧历史栏、中间助手、底部输入条。填入 API Key 即可提问，其它导航是占位。">
 </p>
 
 填入 OpenAI 兼容密钥就能对话。页面默认停在**助手**；收银台、订单、图纸等栏位还在，但是占位。不需要登录。
 
 <p align="center">
-  <img src="./assets/readme/proof-assistant.png" width="100%" alt="助手页：默认选中助手，提示去设置粘贴 API Key，并给出营业额、支付方式、开台时段等推荐问法。">
+  <img src="./assets/readme/proof-assistant.png" width="100%" alt="助手页：顶栏选中助手，左侧历史栏，中间推荐问法叠在输入条上方。">
 </p>
 
 <p align="center">
-  <img src="./assets/readme/proof-settings.png" width="100%" alt="设置页：状态为未配置，可填写接口地址、模型名和 API Key，然后测试保存。">
+  <img src="./assets/readme/proof-settings.png" width="100%" alt="设置页：同一顶栏，选中设置。未配置状态，可填接口、模型名和 API Key。">
 </p>
 
 这是一个可独立运行的演示壳。问营业、支付、客流会返回**演示数字**和图表。座位图是说明卡。开台 / 结算 / 改价只弹出确认卡外形，点确认也不会改账。

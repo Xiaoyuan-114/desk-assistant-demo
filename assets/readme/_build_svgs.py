@@ -3,7 +3,7 @@ from pathlib import Path
 
 OUT = Path(__file__).resolve().parent
 
-HERO = """<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+HERO = """<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
   <title id="title">{title}</title>
   <desc id="desc">{desc}</desc>
   <defs>
@@ -11,15 +11,18 @@ HERO = """<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" view
       <stop offset="0" stop-color="#ffe8d6"/>
       <stop offset="1" stop-color="#fff4e5"/>
     </linearGradient>
+    <clipPath id="win">
+      <rect x="0" y="0" width="500" height="332" rx="18"/>
+    </clipPath>
   </defs>
-  <rect width="1200" height="400" rx="26" fill="url(#wash)"/>
-  <rect x="1" y="1" width="1198" height="398" rx="25" fill="none" stroke="#e4cdb0"/>
-  <g id="title-block" transform="translate(64 72)">
+  <rect width="1200" height="420" rx="26" fill="url(#wash)"/>
+  <rect x="1" y="1" width="1198" height="418" rx="25" fill="none" stroke="#e4cdb0"/>
+  <g id="title-block" transform="translate(56 80)">
     <text x="0" y="0" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20">{eyebrow}</text>
     <text x="0" y="72" fill="#d62828" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="56" font-weight="700">{name}</text>
     <text x="0" y="124" fill="#2b2118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="22">{line1}</text>
     <text x="0" y="158" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20">{line2}</text>
-    <g transform="translate(0 196)">
+    <g transform="translate(0 204)">
       <rect width="112" height="36" rx="18" fill="#fffaf3" stroke="#e4cdb0"/>
       <text x="56" y="24" text-anchor="middle" fill="#2b2118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18">{chip1}</text>
       <rect x="124" width="136" height="36" rx="18" fill="#fffaf3" stroke="#e4cdb0"/>
@@ -28,24 +31,33 @@ HERO = """<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" view
       <text x="330" y="24" text-anchor="middle" fill="#2b2118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">Node 20</text>
     </g>
   </g>
-  <g id="project-proof" transform="translate(668 48)">
-    <rect width="476" height="304" rx="20" fill="#fffaf3" stroke="#e4cdb0"/>
-    <rect x="16" y="16" width="444" height="44" rx="14" fill="#fff4e5" stroke="#e4cdb0"/>
-    <text x="32" y="44" fill="#d62828" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="16" font-weight="700">{name}</text>
-    <rect x="156" y="24" width="72" height="28" rx="14" fill="#fffaf3" stroke="#e4cdb0"/>
-    <text x="192" y="44" text-anchor="middle" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18">{tab_orders}</text>
-    <rect x="234" y="24" width="72" height="28" rx="14" fill="#d62828"/>
-    <text x="270" y="44" text-anchor="middle" fill="#fffaf3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18">{tab_agent}</text>
-    <rect x="312" y="24" width="72" height="28" rx="14" fill="#fffaf3" stroke="#e4cdb0"/>
-    <text x="348" y="44" text-anchor="middle" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18">{tab_settings}</text>
-    <rect x="32" y="84" width="196" height="40" rx="12" fill="#ffe3e0"/>
-    <text x="130" y="110" text-anchor="middle" fill="#2b2118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18">{chip_sales}</text>
-    <rect x="236" y="84" width="208" height="40" rx="12" fill="#fff4e5" stroke="#e4cdb0"/>
-    <text x="340" y="110" text-anchor="middle" fill="#2b2118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18">{chip_hours}</text>
-    <rect x="32" y="140" width="412" height="132" rx="16" fill="#ffffff" stroke="#e4cdb0"/>
-    <text x="52" y="176" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="16">{demo_label}</text>
-    <text x="52" y="214" fill="#2b2118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="24" font-weight="700">{demo_amount}</text>
-    <text x="52" y="248" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="16">{demo_note}</text>
+  <g id="project-proof" transform="translate(656 44)">
+    <rect width="500" height="332" rx="18" fill="#fffaf3" stroke="#e4cdb0"/>
+    <g clip-path="url(#win)">
+      <rect width="500" height="48" fill="#fffaf3"/>
+      <circle cx="28" cy="24" r="14" fill="#fff" stroke="#e4cdb0"/>
+      <text x="28" y="29" text-anchor="middle" fill="#d62828" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="14" font-weight="700">{mark}</text>
+      <rect x="200" y="12" width="56" height="24" rx="12" fill="#d62828"/>
+      <text x="228" y="29" text-anchor="middle" fill="#fffaf3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="14">{tab_agent}</text>
+      <rect x="262" y="12" width="56" height="24" rx="12" fill="#f3e6d4"/>
+      <text x="290" y="29" text-anchor="middle" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="14">{tab_settings}</text>
+      <rect x="430" y="12" width="52" height="24" rx="12" fill="#f3e6d4"/>
+      <text x="456" y="29" text-anchor="middle" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="14">{demo_label}</text>
+      <rect y="48" width="118" height="284" fill="#f3e6d4"/>
+      <text x="16" y="80" fill="#2b2118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="18" font-weight="700">{new_chat}</text>
+      <text x="16" y="112" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="16">{recent}</text>
+      <text x="140" y="84" fill="#2b2118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="22" font-weight="700">{desk}</text>
+      <rect x="140" y="104" width="200" height="36" rx="18" fill="#f3e6d4"/>
+      <text x="156" y="128" fill="#3d2918" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="16">{chip_sales}</text>
+      <rect x="140" y="148" width="200" height="36" rx="18" fill="#f3e6d4"/>
+      <text x="156" y="172" fill="#3d2918" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="16">{chip_pay}</text>
+      <rect x="140" y="192" width="200" height="36" rx="18" fill="#f3e6d4"/>
+      <text x="156" y="216" fill="#3d2918" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="16">{chip_hours}</text>
+      <rect x="140" y="268" width="336" height="48" rx="16" fill="#fff" stroke="#e4cdb0"/>
+      <text x="156" y="298" fill="#7a654f" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="16">{placeholder}</text>
+      <rect x="388" y="276" width="76" height="32" rx="12" fill="#d62828"/>
+      <text x="426" y="298" text-anchor="middle" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="16">{send}</text>
+    </g>
   </g>
 </svg>
 """
@@ -99,27 +111,29 @@ def write(name: str, text: str) -> None:
     (OUT / name).write_text(text, encoding="utf-8", newline="\n")
 
 
-# All Chinese via unicode escapes so this file stays ASCII-safe.
 C = {
     "title": "\u67dc\u53f0\u52a9\u624b\u6f14\u793a",
-    "desc": "\u586b\u5165 OpenAI \u517c\u5bb9 API Key \u5373\u53ef\u63d0\u95ee\u3002\u5bfc\u822a\u5176\u5b83\u680f\u662f\u5360\u4f4d\uff0c\u6ca1\u6709\u771f\u5b9e\u6536\u94f6\u8d26\u672c\u3002",
+    "desc": "\u586b\u5165 OpenAI \u517c\u5bb9 API Key \u5373\u53ef\u63d0\u95ee\u3002\u5de6\u4fa7\u5386\u53f2\u680f\u52a0\u5e95\u90e8\u8f93\u5165\u6761\uff0c\u548c\u771f\u5b9e\u754c\u9762\u4e00\u81f4\u3002",
     "eyebrow": "\u67dc\u53f0\u6f14\u793a \u00b7 \u65e0\u9700\u767b\u5f55",
     "name": "\u67dc\u53f0\u52a9\u624b\u6f14\u793a",
     "line1": "\u586b\u5165 API Key\uff0c\u5c31\u80fd\u95ee\u8425\u4e1a\u4e0e\u5ba2\u6d41\u3002",
     "line2": "\u5176\u5b83\u6536\u94f6\u53f0\u680f\u4f4d\u662f\u5360\u4f4d\u3002\u786e\u8ba4\u4e0d\u4f1a\u6539\u8d26\u3002",
     "chip1": "\u65e0\u9700\u767b\u5f55",
-    "tab_orders": "\u8ba2\u5355",
+    "mark": "\u67dc",
     "tab_agent": "\u52a9\u624b",
     "tab_settings": "\u8bbe\u7f6e",
-    "chip_sales": "\u4eca\u5929\u8425\u4e1a\u989d\u662f\u591a\u5c11",
-    "chip_hours": "\u5f00\u53f0\u65f6\u6bb5\u4e3b\u8981\u662f\u4ec0\u4e48",
-    "demo_label": "\u6f14\u793a\u6570\u636e",
-    "demo_amount": "\u4eca\u65e5\u8425\u4e1a\u989d 1280.00 \u5143",
-    "demo_note": "\u4e3b\u8981\u4ee5\u626b\u7801\u652f\u4ed8 \u00b7 \u5ea7\u4f4d\u56fe\u672a\u63a5\u5165",
+    "demo_label": "\u6f14\u793a",
+    "new_chat": "\u65b0\u5bf9\u8bdd",
+    "recent": "\u6700\u8fd1",
+    "desk": "\u67dc\u53f0\u52a9\u624b",
+    "chip_sales": "\u4eca\u5929\u8425\u4e1a\u989d",
+    "chip_pay": "\u652f\u4ed8\u65b9\u5f0f",
+    "chip_hours": "\u5f00\u53f0\u65f6\u6bb5",
+    "placeholder": "\u4f8b\u5982\uff1a\u4eca\u5929\u8425\u4e1a\u989d\u591a\u5c11",
+    "send": "\u53d1\u9001",
 }
 
 write("hero.svg", HERO.format(**C))
-
 write(
     "section-use.svg",
     SECTION.format(

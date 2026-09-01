@@ -30,7 +30,7 @@ function VisualChart({ visual }: { visual: AgentVisual }) {
       return { date: String(item.date || '').slice(5), revenue: Number(item.total_revenue || 0) }
     })
     return (
-      <div className="chart-panel">
+      <div className="dash-chart-panel agent-visual-panel">
         <ResponsiveContainer width="100%" height={220}>
           <LineChart data={points}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e8e4dc" />
@@ -49,7 +49,7 @@ function VisualChart({ visual }: { visual: AgentVisual }) {
       return { hour: `${item.hour}:00`, count: Number(item.open_count || 0) }
     })
     return (
-      <div className="chart-panel">
+      <div className="dash-chart-panel agent-visual-panel">
         <ResponsiveContainer width="100%" height={220}>
           <BarChart data={hours}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e8e4dc" />
@@ -73,7 +73,7 @@ function VisualChart({ visual }: { visual: AgentVisual }) {
       }))
       .filter((d) => d.value > 0)
     return (
-      <div className="chart-panel">
+      <div className="dash-chart-panel agent-visual-panel">
         <ResponsiveContainer width="100%" height={220}>
           <PieChart>
             <Pie data={mixData} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={48} outerRadius={78}>
@@ -99,9 +99,9 @@ function VisualChart({ visual }: { visual: AgentVisual }) {
 export default function AgentVisuals({ visuals }: { visuals: AgentVisual[] }) {
   if (!visuals.length) return null
   return (
-    <div className="visuals">
+    <div className="agent-visuals">
       {visuals.map((visual, index) => (
-        <section key={`${visual.kind}-${index}`} className="visual">
+        <section key={`${visual.kind}-${index}`} className="agent-visual">
           <h3>{visual.title}</h3>
           <VisualChart visual={visual} />
         </section>
